@@ -1,0 +1,111 @@
+Last login: Mon Apr 15 16:52:34 on ttys000
+/Library/PostgreSQL/16/scripts/runpsql.sh; exit
+admin@MacBook-Pro-admin ~ % /Library/PostgreSQL/16/scripts/runpsql.sh; exit
+Server [localhost]:
+Database [postgres]: home_work
+Port [5432]:
+Username [postgres]:
+Password for user postgres:
+psql (16.2)
+Type "help" for help.
+
+home_work=# create table plane(id serial primary key,plane_name);
+ERROR:  syntax error at or near ")"
+LINE 1: create table plane(id serial primary key,plane_name);
+^
+home_work=#  create table plane(id serial primary key,plane_name varchra);
+ERROR:  type "varchra" does not exist
+LINE 1: ...reate table plane(id serial primary key,plane_name varchra);
+^
+home_work=#
+home_work=#  create table plane(id serial primary key,plane_name varchar (50));
+CREATE TABLE
+    home_work=# insert into(plane_name) values('Boing-13');
+ERROR:  syntax error at or near "("
+LINE 1: insert into(plane_name) values('Boing-13');
+^
+home_work=# insert into plane (plane_name) values('Boing-13');
+INSERT 0 1
+home_work=# creat table country(id serial primary key , country_name varchar);
+ERROR:  syntax error at or near "creat"
+LINE 1: creat table country(id serial primary key , country_name var...
+        ^
+home_work=# create table country(id serial primary key , country_name varchar);
+CREATE TABLE
+home_work=# insert into (country_name ) values ('bishkek');
+ERROR:  syntax error at or near "("
+LINE 1: insert into (country_name ) values ('bishkek');
+                    ^
+home_work=# create table lee(id serial primary key, lee_name varchar);
+CREATE TABLE
+home_work=# insert into(lee_name ) values ('bruse');
+ERROR:  syntax error at or near "("
+LINE 1: insert into(lee_name ) values ('bruse');
+                   ^
+home_work=# insert into lee(lee_name)values('bruse');
+INSERT 0 1
+home_work=# insert into country(country_name)values('kyrgyzstan');
+INSERT 0 1
+home_work=# create table window (id serial primary key, prise int);
+ERROR:  syntax error at or near "window"
+LINE 1: create table window (id serial primary key, prise int);
+                     ^
+home_work=# insert into window(prise) values(12);
+ERROR:  syntax error at or near "window"
+LINE 1: insert into window(prise) values(12);
+                    ^
+home_work=# create table window(id serial,price int);
+ERROR:  syntax error at or near "window"
+LINE 1: create table window(id serial,price int);
+                     ^
+home_work=# create table nurs(id serial,price int);
+CREATE TABLE
+home_work=# insert into nurs(prise) values (1234);
+ERROR:  column "prise" of relation "nurs" does not exist
+LINE 1: insert into nurs(prise) values (1234);
+                         ^
+home_work=# insert into nurs(price) values (1234);
+INSERT 0 1
+home_work=# create table bek(id serial, name varchar);
+CREATE TABLE
+home_work=# insert into bek(name) values ('bektur');
+INSERT 0 1
+home_work=# create table doni(id serial , prise int );
+CREATE TABLE
+home_work=# insert into doni(prise ) values (33);
+INSERT 0 1
+home_work=# create table gogo(id serial , prise int);
+CREATE TABLE
+home_work=# insert into gogo(prise) values (44);
+INSERT 0 1
+home_work=# create table fafous(id serial , prise int);
+CREATE TABLE
+home_work=# insert into fafus(prise) values (66);
+ERROR:  relation "fafus" does not exist
+LINE 1: insert into fafus(prise) values (66);
+                    ^
+home_work=# insert into fafous(prise) values (66);
+INSERT 0 1
+home_work=# create table ccc(id serial, name varchar);
+CREATE TABLE
+home_work=# inset into (name) values('bobo');
+ERROR:  syntax error at or near "inset"
+LINE 1: inset into (name) values('bobo');
+        ^
+home_work=# insert into (name) values('bobo');
+ERROR:  syntax error at or near "("
+LINE 1: insert into (name) values('bobo');
+                    ^
+home_work=# insert  into (name) values('bobo');
+ERROR:  syntax error at or near "("
+LINE 1: insert  into (name) values('bobo');
+                     ^
+home_work=# create table ddd(id serial , name varchar);
+CREATE TABLE
+home_work=# insert into ddd(name) values ('horror');
+INSERT 0 1
+home_work=# create table dk(id serial , name varchar );
+CREATE TABLE
+home_work=# insert into dk(name) values ('cool');
+INSERT 0 1
+home_work=#
